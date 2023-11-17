@@ -79,10 +79,10 @@ class Agente:
             mini_sample = self.memory 
 
         states, actions, rewards, next_states, dones = zip(*mini_sample)
-        self.trainer.trainStep(states, actions, rewards, next_states, dones)
+        self.trainer.train_step(states, actions, rewards, next_states, dones)
 
     def train_short_memory(self, state, action, reward, next_state, done):
-        self.trainer.trainStep(state, action, reward, next_state, done)
+        self.trainer.train_step(state, action, reward, next_state, done)
 
     def getAction(self, state):
         # movimientos aleatorios 
